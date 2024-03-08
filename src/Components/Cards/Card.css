@@ -1,0 +1,123 @@
+.card {
+    border: 1px solid #000;
+    position: relative;
+    box-shadow: 0 0 15px #a46868;
+    width: 300px;
+    height: 400px;
+    text-align: center;
+    /* align-items: center; */
+    border-radius: 30px;
+    background: #fffefe !important;
+    margin: 10px;
+  }
+  .card:hover {
+    box-shadow: 0 0 50px #a46868;
+  }
+  .cardImage img {
+    margin-top: 5px;
+    width: 100px;
+  
+    border-radius: 30px 30px 0px 0px;
+  }
+  .cardImage:hover {
+    transform: scale(0.9);
+  }
+  .cardTitle {
+    text-align: start !important;
+    /* border-top: 2px solid #000; */
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    font-size: 25px;
+    display: flex;
+    /* margin-right: 10px; */
+    /* margin-left: 10px; */
+    justify-content: space-evenly;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 220px;
+    cursor: pointer;
+  }
+  .cardCategoryBtn {
+    font-weight: bold;
+    font-size: 15px;
+    min-width: 150px;
+    width: fit-content;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* color: #fffefe; */
+    border-radius: 20px;
+    background: #a46868;
+    border: none;
+    border: 1px solid #fffefe;
+    cursor: pointer;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 180px;
+  }
+  .cardDescription {
+    margin: 5px;
+    text-align: left;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 110px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+  
+  .cardPrice {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin: 5px;
+    margin-top: 20px;
+  }
+  
+  .cardAddToCartParent {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 10px;
+  }
+  .cardAddToCartBtn1 {
+    width: 200px;
+    padding: 5px;
+    justify-content: start;
+    background: none;
+    border-radius: 5px;
+    background: #a46868;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  .cardAddToCartBtn2 {
+    background: none;
+    border: none;
+    font-size: 20px;
+    /* cursor: pointer; */
+  }
+  .rating {
+    display: flex;
+    justify-content: space-evenly;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-bottom: 30px;
+  
+    cursor: pointer;
+  }
+  .rating img {
+    width: 150px;
+    cursor: pointer;
+  }
