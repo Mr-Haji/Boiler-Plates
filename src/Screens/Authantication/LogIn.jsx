@@ -3,7 +3,6 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import CssBaseline from "@mui/material/CssBaseline";
 import TextField from "@mui/material/TextField";
-
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
 import LockOutlinedIcon from "@mui/icons-material/LockOutlined";
@@ -43,7 +42,6 @@ const LogIn = () => {
   const Navigate = useNavigate();
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  // console.log(email, password);
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -51,15 +49,17 @@ const LogIn = () => {
       await signInWithEmailAndPassword(AUTH, email, password)
         .then((userCredential) => {
           console.log(userCredential.user.uid);
-          Navigate("/Home");
+
+          localStorage.setItem("User", userCredential.user.uid);
+          Navigate("/dashBoard");
         })
         .catch((error) => {
-          console.log(error.code);
           const errorCode = error.code;
           const errorMessage = error.message;
-          // ..
+          console.log(errorCode);
+          console.log(errorMessage)
         });
-    } catch (error) { console.log(error)}
+    } catch (error) { console.log(error) }
   };
 
   return (
@@ -121,7 +121,7 @@ const LogIn = () => {
             </Button>
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link to={"/"} variant="body2">
+                <Link to={"/SignUp"} variant="body2">
                   Don't Have An Account? Sign Up
                 </Link>
               </Grid>

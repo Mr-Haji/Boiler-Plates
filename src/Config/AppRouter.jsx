@@ -3,22 +3,19 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "../Screens/Home/Home";
 import LogIn from "../Screens/Authantication/LogIn";
 import SignUp from "../Screens/Authantication/SignUp";
-import Products from "../Screens/Products/Products";
-import ProductDetailedPage from "../Screens/Products/ProductDetailedPage";
-import About from "../Screens/About/About";
+import DashBoard from "../Screens/DonorIndex/DashBoard";
+import ProtectedRoutes from "./ProtectedRoutes";
+import PublicRoutes from "./PublicRoutes";
+
 
 const AppRouter = () => {
   return (
-    <Router>
-      <Routes>
-        <Route element={<Home />} path="/Home" />
-        <Route path="/logIn" element={<LogIn />} />
-        <Route path="/" element={<SignUp />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/products/:id" element={<ProductDetailedPage />} />
-      </Routes>
-    </Router>
+    <Routes>
+      <Route path="/" element={<LogIn />} />
+      <Route path="/SignUp" element={<SignUp />} />
+      <Route element={<Home />} path="/regForm" />
+      <Route path="/dashBoard" element={<DashBoard />} />
+    </Routes>
   );
 };
 

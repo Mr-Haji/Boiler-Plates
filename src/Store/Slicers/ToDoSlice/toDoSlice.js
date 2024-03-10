@@ -17,7 +17,6 @@ const toDoSlice = createSlice(
                         id: nanoid(),
                         todo: action.payload,
                     },
-
                 )
             },
 

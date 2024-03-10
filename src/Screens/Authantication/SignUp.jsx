@@ -39,12 +39,8 @@ const defaultTheme = createTheme();
 
 export default function SignUp() {
   const Navigate = useNavigate();
-  // const [firstName, setfirstName] = useState("");
-
-  // const [lastName, setlastName] = useState("");
   const [email, setemail] = useState("");
   const [password, setpassword] = useState("");
-  // console.log(firstName, lastName, email, password);
   const handleSubmit = (event) => {
     console.log("Check ")
     event.preventDefault();
@@ -54,14 +50,15 @@ export default function SignUp() {
         .then((userCredential) => {
           console.log("User In ")
           console.log(userCredential.user.uid);
-          // localStorage.setItem("User", userCredential.user.uid);
+          localStorage.setItem("User", userCredential.user.uid);
 
-          Navigate("/Home");
+          Navigate("/dashBoard");
         })
         .catch((error) => {
-          console.log(error)
           const errorCode = error.code;
           const errorMessage = error.message;
+          console.log(errorMessage)
+          console.log(errorCode)
           // ..
         });
     } catch (error) { console.log(error) }
@@ -147,10 +144,10 @@ export default function SignUp() {
             >
               Sign Up
             </Button>
-            
+
             <Grid container justifyContent="flex-end">
               <Grid item>
-                <Link to={"/logIn"} variant="body2">
+                <Link to={"/"} variant="body2">
                   Already have an account? Sign in
                 </Link>
               </Grid>
